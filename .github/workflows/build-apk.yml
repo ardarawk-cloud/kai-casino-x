@@ -10,6 +10,7 @@ permissions:
 
 env:
   APP_NAME: KAI-CASINO-X
+  VERSION: 2.0.0
 
 jobs:
   build:
@@ -33,23 +34,24 @@ jobs:
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk KAI-CASINO-X-v1.0.0.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk KAI-CASINO-X-v${VERSION}.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: KAI-CASINO-X-APK
-          path: KAI-CASINO-X-v1.0.0.apk
+          name: KAI-CASINO-X-v2-APK
+          path: KAI-CASINO-X-v2.0.0.apk
           retention-days: 30
 
-      - name: Publish latest APK release
+      - name: Publish v2 release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.0
-          name: KAI CASINO X v1.0.0
+          tag_name: v2.0.0
+          name: KAI CASINO X v2.0.0
           prerelease: false
           make_latest: true
-          files: KAI-CASINO-X-v1.0.0.apk
+          files: KAI-CASINO-X-v2.0.0.apk
           body: |
-            KAI CASINO X Android demo release.
-            Virtual credits only. No deposits, cash-out, or real-money wagering.
+            KAI CASINO X v2 mobile casino entertainment build.
+            22 playable demo games, persistent KAI Coins, XP/VIP, missions and rewards.
+            Virtual credits only. No deposits, cash-out, cryptocurrency, or real-money wagering.
