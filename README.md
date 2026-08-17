@@ -2,6 +2,8 @@
 
 Premium Android casino-style entertainment demo.
 
+Build channel: GitHub Actions → downloadable APK release.
+
 ## Included
 - Original KAI CASINO X logo and dark premium UI
 - Persistent demo-credit wallet (starts at 10,000)
