@@ -10,7 +10,7 @@ permissions:
 
 env:
   APP_NAME: KAI-CASINO-X
-  VERSION: 2.0.0
+  VERSION: 2.2.0
 
 jobs:
   build:
@@ -39,19 +39,20 @@ jobs:
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: KAI-CASINO-X-v2-APK
-          path: KAI-CASINO-X-v2.0.0.apk
+          name: KAI-CASINO-X-v2.2.0-APK
+          path: KAI-CASINO-X-v2.2.0.apk
           retention-days: 30
 
-      - name: Publish v2 release
+      - name: Publish v2.2.0 release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v2.0.0
-          name: KAI CASINO X v2.0.0
+          tag_name: v2.2.0
+          name: KAI CASINO X v2.2.0
           prerelease: false
           make_latest: true
-          files: KAI-CASINO-X-v2.0.0.apk
+          files: KAI-CASINO-X-v2.2.0.apk
           body: |
-            KAI CASINO X v2 mobile casino entertainment build.
-            22 playable demo games, persistent KAI Coins, XP/VIP, missions and rewards.
+            KAI CASINO X v2.2.0 visual polish release.
+            Refined premium lobby, cards, navigation, reward states, VIP presentation and in-game stage hierarchy.
+            Includes 22 playable demo games with persistent KAI Coins, XP, missions and settings.
             Virtual credits only. No deposits, cash-out, cryptocurrency, or real-money wagering.
