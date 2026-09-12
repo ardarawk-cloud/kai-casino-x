@@ -17,7 +17,7 @@ public class MainActivityV23 extends Activity {
         LauncherView(Context c){super(c);}
         @Override void handle(int id){
             if(id>=2000 && id<2100){
-                Intent intent=new Intent(getContext(),GameActivity.class);
+                Intent intent=new Intent(getContext(),GameActivityV24.class);
                 intent.putExtra("game",id-2000);
                 getContext().startActivity(intent);
                 return;
