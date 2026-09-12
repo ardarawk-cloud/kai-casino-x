@@ -7,6 +7,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".GameActivityV24"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".GameActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
