@@ -10,7 +10,7 @@ permissions:
 
 env:
   APP_NAME: KAI-CASINO-X
-  VERSION: 2.3.0
+  VERSION: 2.4.0
 
 jobs:
   build:
@@ -39,20 +39,20 @@ jobs:
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: KAI-CASINO-X-v2.3.0-APK
-          path: KAI-CASINO-X-v2.3.0.apk
+          name: KAI-CASINO-X-v2.4.0-APK
+          path: KAI-CASINO-X-v2.4.0.apk
           retention-days: 30
 
-      - name: Publish v2.3.0 release
+      - name: Publish v2.4.0 release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v2.3.0
-          name: KAI CASINO X v2.3.0
+          tag_name: v2.4.0
+          name: KAI CASINO X v2.4.0
           prerelease: false
           make_latest: true
-          files: KAI-CASINO-X-v2.3.0.apk
+          files: KAI-CASINO-X-v2.4.0.apk
           body: |
-            KAI CASINO X v2.3.0 interactive gameplay release.
-            Adds stateful slot paylines, roulette bet selection, blackjack Hit/Stand/Double, baccarat third-card rules, Sic Bo selections, and live Crash cash-out rounds.
-            Preserves the polished v2.2 lobby, persistent KAI Coins, XP, missions, VIP and settings.
-            Virtual credits only. No deposits, withdrawals, cash-out, cryptocurrency, or real-money wagering.
+            KAI CASINO X v2.4.0 gameplay depth and polish release.
+            Adds unique 2D/3D/4D Lucky Draw ticket matching, Neon Dice choices, Coin Tower risk ladder, 12-segment Lucky Wheel, and Royal Cards higher/lower rounds.
+            Preserves v2.3 stateful slots, roulette, blackjack, baccarat, Sic Bo and Crash plus the polished lobby, persistent KAI Coins, XP, missions, VIP and settings.
+            Virtual credits only. No deposits, withdrawals, real-money cash-out, cryptocurrency, or real-money wagering.
